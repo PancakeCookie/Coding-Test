@@ -18,3 +18,5 @@ if inmoney >= 10:
     inmoney = inmoney % 10
 
 print(givecoin)
+
+# 동전 종류를 리스트로
