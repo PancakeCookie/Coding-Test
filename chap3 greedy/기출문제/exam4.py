@@ -1,7 +1,12 @@
+from itertools import combinations, permutations
+
 n = int(input())
 mycoin = list(map(int, input().split()))
 
-mycoin.sort(reverse=True)
-xcoin = 1
+mycoin.sort()
+possiblecoin = []
 
-print(xcoin in mycoin)
+for i in range(1, n + 1):
+    combi = list(combinations(mycoin, i))
+
+print(combi)
