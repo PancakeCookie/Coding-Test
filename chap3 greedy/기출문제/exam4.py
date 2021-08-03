@@ -6,7 +6,9 @@ mycoin = list(map(int, input().split()))
 mycoin.sort()
 possiblecoin = []
 
-for i in range(1, n + 1):
-    combi = list(combinations(mycoin, i))
+
+combi = list(combinations(mycoin, 2))
 
 print(combi)
+
+# 정답 꼭 체크
