@@ -14,4 +14,4 @@ for i in range(len(count)):
         for j in range(count[i]):
             sys.stdout.write(str(i) + "\n")
 
-# sys를 씁니다
+# sys를 씁시다

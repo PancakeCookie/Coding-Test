@@ -7,10 +7,19 @@ maze = []
 for i in range(n):
     maze.append(list(map(int, input())))
 
+queue = deque
+visited = [[False] * (n) for _ in range(n)]
+cnt = 0
+
+print(visited)
+
+
 def bfs(x, y):
-    queue = deque
+    queue.append(x, y)
+    visited[x][y] = True
+    while queue:
+        node = queue.popleft()
+        cnt = cnt + 1
 
-count = 1
 
-for i in range(n):
-    for m in range(m):
+# return continue break
