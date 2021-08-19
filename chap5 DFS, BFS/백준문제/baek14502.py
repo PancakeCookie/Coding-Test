@@ -52,7 +52,7 @@ for i in range(len(result)):
             if lab_copy[i][j] == 0:  # 0 갯수 세고
                 count = count + 1
     countlist.append(count)  # 카운트에 넣은 다음
-    lab_copy = copy.deepcopy(lab)  # 초기화
+    lab_copy = copy.deepcopy(lab)  # 전부 초기화
     count = 0
 
 print(max(countlist))
