@@ -12,6 +12,8 @@ for i in range(n):
 cnt = 0
 
 while True:
+    if n == 1:
+        break
     a = que.get()
     b = que.get()
     cnt = cnt + a + b
@@ -19,7 +21,11 @@ while True:
         que.put(a + b)
     else:
         break
-print(cnt)
+
+if n == 1:
+    sys.stdout.write(str(0))
+else:
+    sys.stdout.write(str(cnt))
 
 # def solution(L, x):
 #     for i in range(len(L)):
