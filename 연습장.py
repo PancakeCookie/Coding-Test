@@ -1,39 +1,15 @@
-n, m, v = map(int, input().split())
-graph = [[] for _ in range(n + 1)]
-for i in range(m):
-    node1, node2 = map(int, input().split())
-    graph[node1].append(node2)
-    graph[node2].append(node1)
-for i in range(n + 1):
-    graph[i].sort()
+x = int(input())
 
-print(graph)
-check_dfs = [False] * (n + 1)
-check_bfs = [False] * (n + 1)
+array = [0] * 1000001
 
-
-def DFS(v):
-    check_dfs[v] = True
-    print(v, end=" ")
-    for value in graph[v]:
-        if check_dfs[value] == False:
-            DFS(value)
-
-
-DFS(v)
-print()
-
-
-def BFS(v):
-    check_bfs[v] = True
-    q = deque([v])
-    while q:
-        now = q.popleft()
-        print(now, end=" ")
-        for value in graph[now]:
-            if check_bfs[value] == False:
-                q.append(value)
-                check_bfs[value] = True
-
-
-BFS(v)
+for i in range(1, x + 1):
+    if i == 1:
+        array[i] = 0
+    else:
+        array[i] = array[i - 1] + 1
+        if i % 3 == 0:
+            array[i] = min(array[i], array[i // 3] + 1)
+        if i % 2 == 0:
+            array[i] = min(array[i], array[i // 2] + 1)
+    if i == x:
+        print(array[i])
