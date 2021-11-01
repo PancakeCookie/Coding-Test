@@ -1,15 +1,14 @@
-x = int(input())
+student = {}
+ssac = {}
+number = 3
+n = []
+for i in range(0, 3):
+    for j in range(0,3):
+        m = list(input().split())
+        n.append(m)
+    student[n[1][0]] = n[1][1]
+    student[n[2][0]] = n[2][1]  
+    ssac[n[0][1]] = student
+    n=[]
 
-array = [0] * 1000001
-
-for i in range(1, x + 1):
-    if i == 1:
-        array[i] = 0
-    else:
-        array[i] = array[i - 1] + 1
-        if i % 3 == 0:
-            array[i] = min(array[i], array[i // 3] + 1)
-        if i % 2 == 0:
-            array[i] = min(array[i], array[i // 2] + 1)
-    if i == x:
-        print(array[i])
+print(ssac)
