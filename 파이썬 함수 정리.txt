@@ -1,0 +1,27 @@
+- split
+string.split('구분자', 분할횟수)
+
+- replace
+string.replace('검색 문자', '치환 문자', 치환 횟수)
+
+- list
+리스트로 바꾸는 것 외에도 문자열을 한글자씩 리스트로 만들 수 있음, list(range(4)) == [0, 1, 2, 3]
+
+- ord, chr
+ord(a), 글자를 유니코드로 변환, chr(65), 유니코드를 글자로 변환
+A == 65, Z == 90
+a == 97, z == 122
+
+- Counter
+from collections import Counter
+Counter(list).most_common(n), 가장 많은 n개 출력
+
+- max, min, sum
+max(list)
+
+- pow
+제곱
+
+- find, index
+string.find('찾고자하는 값') // only string, 없으면 -1 반환
+list.index('찾고자하는 값') // string, list, tuple에서 가능, 없으면 error
